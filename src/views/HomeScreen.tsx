@@ -1,20 +1,20 @@
 import React, { useRef } from 'react';
-import { SafeAreaView } from 'react-native';
-import { styles } from './HomeScreen.styles';
+import { View } from 'react-native';
 import { WebView } from 'react-native-webview';
-import {WEB_VIEW_URL} from '../config/constants';
+import { WEB_VIEW_URL } from '../config/constants';
+import { styles } from './HomeScreen.styles';
 
 const HomeScreen = () => {
   const webviewRef = useRef(null);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <WebView
         ref={webviewRef}
         style={{ flex: 1 }}
         source={{ uri: WEB_VIEW_URL }}
       />
-    </SafeAreaView>
+    </View>
   );
 }
 
